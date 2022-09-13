@@ -61,9 +61,8 @@ app.get('/fork', async (req, res) => {
 
 
 //STATIC FILES 
-
-//app.use(express.static('.../frontend/index'));
-
+app.use(express.static('../frontend/index.js'));
+app.use('/static', express.static('../frontend/public'))
 
 //STARTING THE SERVER 
 app.listen(app.get('port'), () => {
